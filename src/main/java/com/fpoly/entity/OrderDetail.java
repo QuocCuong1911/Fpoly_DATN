@@ -29,8 +29,8 @@ public class OrderDetail {
 	private Order order;
 
 	@ManyToOne
-	@JoinColumn(name = "ProductSizeID")
-	private ProductSize productSize;
+	@JoinColumn(name = "ProductID")
+	private Product Product;
 
 	@Column(name = "Quantity")
 	private Integer Quantity;
