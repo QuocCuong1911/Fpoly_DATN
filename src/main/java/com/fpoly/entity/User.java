@@ -1,15 +1,13 @@
 package com.fpoly.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -36,6 +34,14 @@ public class User {
 	
 	@Column(name ="PhoneNumber", nullable = false, columnDefinition = "VARCHAR(13)")
 	private String  PhoneNumber;
-	
-	
+
+	@JsonIgnore
+	@OneToMany(mappedBy = "user",  fetch = FetchType.EAGER)
+	List<Authority> authorities;
+
+	@JsonIgnore
+	@OneToMany(mappedBy = "user")
+	List<Order> orders;
+
+
 }
