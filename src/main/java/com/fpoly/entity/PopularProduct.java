@@ -25,7 +25,7 @@ public class PopularProduct {
     private int PopularProductID;
 	
 	@ManyToOne
-	@JoinColumn(name = "ProductID")
+	@JoinColumn(name = "product")
 	private Product product;
 
 	@Column(name = "NumberOfPurchases")

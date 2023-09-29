@@ -18,7 +18,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "OrderDetail")
+@Table(name = "OrderDetails")
 public class OrderDetail {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,8 +29,9 @@ public class OrderDetail {
 	private Order order;
 
 	@ManyToOne
-	@JoinColumn(name = "ProductID")
-	private Product Product;
+	@JoinColumn(name = "Product")
+	private Product product;
+
 
 	@Column(name = "Quantity")
 	private Integer Quantity;
