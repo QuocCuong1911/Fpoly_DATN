@@ -32,6 +32,9 @@ public class OrderDetail {
 	@JoinColumn(name = "ProductID")
 	private Product product;
 
+	@ManyToOne
+	@JoinColumn(name = "UserID")
+	private User user;
 
 	@Column(name = "Quantity")
 	private Integer Quantity;

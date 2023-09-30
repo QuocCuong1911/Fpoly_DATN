@@ -27,7 +27,8 @@ public class Product {
     @Column(name = "Name", nullable = false, length = 255)
     private String Name;
 
-    @Column(name = "Description", columnDefinition = "TEXT")
+    //Mô tả
+    @Column(name = "Description", columnDefinition = "nvarchar(max)")
     private String Description;
 
     @Column(name = "Price")
@@ -35,6 +36,13 @@ public class Product {
 
     @Column(name = "Quantity")
     private Integer Quantity;
+
+    @Column(name = "Product_information")
+    private String Product_information;
+
+    //Thời gian bảo hành
+    @Column(name ="warranty_period")
+    private double Parranty_period;
 
     @ManyToOne
     @JoinColumn(name = "CategoryID")
