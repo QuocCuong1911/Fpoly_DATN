@@ -37,4 +37,8 @@ public class Order {
 
     @Column(name = "TotalAmount"/*, precision = 10, scale = 2*/)
     private double TotalAmount;
+
+    @ManyToOne
+    @JoinColumn(name = "voucherId")
+    private Voucher voucher; // Trường này để lưu mã voucher áp dụng cho đơn hàng
 }
