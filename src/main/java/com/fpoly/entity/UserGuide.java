@@ -18,6 +18,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "UserGuide")
+//hướng dẫn sử dụng
 public class UserGuide {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

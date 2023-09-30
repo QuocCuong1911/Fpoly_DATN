@@ -19,6 +19,7 @@ import lombok.Setter;
 @Table(name = "GuaranteeDetails")
 @AllArgsConstructor
 @NoArgsConstructor
+//chi tiết bảo hành
 public class GuaranteeDetails {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
