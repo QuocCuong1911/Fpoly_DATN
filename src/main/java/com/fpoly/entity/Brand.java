@@ -22,7 +22,7 @@ public class Brand {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int BrandID;
 
-	@Column(name = "Name", nullable = false, columnDefinition = "nvarchar(100)")
+	@Column(name = "Name", nullable = false, columnDefinition = "nvarchar(150)")
 	private String Name;
 
 	@Column(name = "Description", columnDefinition = "nvarchar(max)")
