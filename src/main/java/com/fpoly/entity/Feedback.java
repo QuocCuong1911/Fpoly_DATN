@@ -21,13 +21,13 @@ public class Feedback {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int FeedbackID;
 
-    @Column(name = "Title", length = 255)
+    @Column(name = "Title", columnDefinition = "nvarchar(max)")
     private String Title;
 
-    @Column(name = "Mail", length = 50)
+    @Column(name = "Mail",columnDefinition = "varchar(50)")
     private String Mail;
 
-    @Column(name = "Message", columnDefinition = "NVARCHAR(255)")
+    @Column(name = "Message", columnDefinition = "nvarchar(max)")
     private String Message;
 
     @Column(name = "Date")

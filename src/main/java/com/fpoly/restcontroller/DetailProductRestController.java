@@ -13,7 +13,7 @@ public class DetailProductRestController {
     @Autowired
     ProductRepository productRepository;
 
-    @GetMapping("/detail{id}")
+    @GetMapping("/detail/{id}")
     public ResponseEntity<Product> getOne(@PathVariable("id") int id) {
         Product product = productRepository.findById(id).get();
         if (product != null) {

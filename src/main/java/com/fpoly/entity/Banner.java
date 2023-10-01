@@ -28,7 +28,7 @@ public class Banner {
 	@Column(name = "ImageURL", nullable = false, length = 255)
 	private String ImageURL;
 
-	@Column(name = "Caption", columnDefinition = "TEXT")
+	@Column(name = "Caption",  columnDefinition = "nvarchar(max)")
 	private String Caption;
 
 	@Column(name = "Order")

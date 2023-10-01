@@ -25,7 +25,7 @@ public class Category {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int IdCategory;
 
-	@Column(name = "Name", nullable = false, columnDefinition = "VARCHAR(100)")
+	@Column(name = "Name", nullable = false, columnDefinition = "nvarchar(100)")
 	private String Name;
 
 	@ManyToOne

@@ -32,8 +32,8 @@ public class Order {
     @Column(name = "OrderDate")
     private Date OrderDate;
 
-    @Column(name = "Status", length = 50)
-    private String Status;
+    @Column(name = "Status")
+    private boolean Status;
 
     @Column(name = "TotalAmount"/*, precision = 10, scale = 2*/)
     private double TotalAmount;

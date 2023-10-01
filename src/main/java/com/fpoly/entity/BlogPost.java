@@ -26,10 +26,10 @@ public class BlogPost {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int PostID;
 
-	@Column(name = "Title", nullable = false, length = 255)
+	@Column(name = "Title", nullable = false, columnDefinition = "nvarchar(max)")
 	private String Title;
 
-	@Column(name = "Content", columnDefinition = "TEXT")
+	@Column(name = "Content", columnDefinition = "nvarchar(max)")
 	private String Content;
 
 	@Column(name = "PublishDate")

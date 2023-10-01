@@ -24,7 +24,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ProductID;
 
-    @Column(name = "Name", nullable = false, length = 255)
+    @Column(name = "Name", nullable = false, columnDefinition = "nvarchar(max)")
     private String Name;
 
     //Mô tả
@@ -37,7 +37,7 @@ public class Product {
     @Column(name = "Quantity")
     private Integer Quantity;
 
-    @Column(name = "Product_information")
+    @Column(name = "Product_information", columnDefinition = "nvarchar(max)")
     private String Product_information;
 
     //Thời gian bảo hành

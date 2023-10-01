@@ -35,6 +35,6 @@ public class Review {
 	@Column(name = "Rating")
 	private int Rating;
 
-	@Column(name = "Comment", columnDefinition = "TEXT")
+	@Column(name = "Comment", columnDefinition = "nvarchar(max)")
 	private String Comment;
 }
