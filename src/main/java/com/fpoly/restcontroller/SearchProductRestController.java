@@ -44,7 +44,7 @@ public class SearchProductRestController {
         }
     }
     @GetMapping("/filter")
-    public List<Product> findProductsByFilter(Double minPrice, Double maxPrice, Integer categoryId) {
+    public List<Product> findProductsByFilter(Double minPrice, Double maxPrice, Integer IdCategory) {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Product> query = criteriaBuilder.createQuery(Product.class);
         Root<Product> root = query.from(Product.class);
@@ -61,13 +61,13 @@ public class SearchProductRestController {
         }
 
         // Kiểm tra và thêm điều kiện về danh mục
-        if (categoryId != null) {
+        if (IdCategory != null) {
             Join<Product, Category> categoryJoin = root.join("category");
-            predicates.add(criteriaBuilder.equal(categoryJoin.get("CategoryID"), categoryId));
+            predicates.add(criteriaBuilder.equal(categoryJoin.get("IdCategory"), IdCategory));
         }
 
         // Nếu không cung cấp giá hoặc danh mục, trả về tất cả sản phẩm
-        if (minPrice == null && maxPrice == null && categoryId == null) {
+        if (minPrice == null && maxPrice == null && IdCategory == null) {
             return entityManager.createQuery(query).getResultList();
         }
 
