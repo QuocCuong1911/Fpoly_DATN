@@ -41,4 +41,10 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "voucherId")
     private Voucher voucher; // Trường này để lưu mã voucher áp dụng cho đơn hàng
+
+    // Người chịu trách nhiệm cho đơn hàng (có thể là User hoặc Admin/Nhân viên)
+    @ManyToOne
+    @JoinColumn(name = "assignedTo")
+    private User assignedTo;
+
 }
