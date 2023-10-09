@@ -42,7 +42,7 @@ public class Product {
 
     //Thời gian bảo hành
     @Column(name ="warranty_period")
-    private double Parranty_period;
+    private Integer Parranty_period;
 
     @ManyToOne
     @JoinColumn(name = "CategoryID")
