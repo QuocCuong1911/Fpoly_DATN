@@ -18,7 +18,6 @@ import com.fpoly.entity.Category;
 import com.fpoly.service.CategoriesService;
 import com.fpoly.service.ProductService;
 
-import jakarta.validation.Valid;
 
 @RestController
 @CrossOrigin("*")
@@ -37,7 +36,7 @@ public class CategoryRestController {
 	}
 	
 	@PostMapping("/create")
-	public ResponseEntity<Category> createCate(@Valid @RequestBody Category cate){
+	public ResponseEntity<Category> createCate( @RequestBody Category cate){
 		return ResponseEntity.ok(cateService.createCategories(cate));
 	}
 	
